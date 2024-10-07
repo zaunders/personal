@@ -1,0 +1,123 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Rubik"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>darksoil studio</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <!--a.class links-->
+    <rocket-header-scroll-menu>
+    <div style="display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    align-items: center;">
+      <div style="flex: 1; display: flex; justify-content: left;">
+        <a href="#Cells">Cells</a>
+        <a href="#Organs">Organs</a>
+        <a href="#hello">Person</a>
+        <a href="#home">Home</a>
+        <a href="#röstånga">Röstånga</a>
+        <a href="#bioregion">Bioregionally</a>
+        <a href="#Planetary work">Planetary work</a>
+      </div>
+
+    </div>
+  </rocket-header-scroll-menu>
+  <div class="parallax">
+    <div class="parallax__layer parallax__layer--back personal-background"></div>
+    <div class="parallax__layer parallax__layer--base">
+      <div class="content">
+        <rocket-content-area style="padding-top: 20px">
+          <rocket-columns style="padding-left: 20px">
+            <div
+              style="
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+              "
+            >
+              <h1>Pin me down</h1>
+              <p style="margin-top: 32px; max-width: 1000px">
+                Fluid membranes and where do I end
+              </p>
+            </div>
+          </rocket-columns>
+        </rocket-content-area>
+        <rocket-content-area>
+          <h2 id="Cells" link-text="cellularly" class="area-headline">
+            Cellular mes <br />
+          </h2>
+
+          <rocket-columns class="row">
+            <rocket-card>
+              <div slot="title" class="row card-title">
+                <h4>Muscle cells</h4>
+                <div class="row">
+                  <p class="poem">
+                    I seem to have others like me right next to me.<br />
+                    They tell me to solidify<br />
+                    I need to send for more energy, ATP for me!<br />
+                    Also there is little plastic pieces here, they are annoying<br />
+                  </p>
+                </div>
+              </div>
+            </rocket-card>
+
+            <rocket-card>
+              <div slot="title" class="row card-title">
+                <h4>Skin cells</h4>
+                <div class="row">
+                  <p class="poem">
+                    I seem to have others like me right next to me.<br />
+                    They tell me to solidify<br />
+                    I need to send for more energy, ATP for me!<br />
+                    Also there is little plastic pieces here, they are annoying<br />
+                  </p>
+                </div>
+              </div>
+            </rocket-card>
+          </rocket-columns>
+        </rocket-content-area>
+      </div>
+    </div>
+  </div>
+ 
+    <script type="module">
+      export async function registerCustomElements() {
+        // server-only components
+        // prettier-ignore
+        customElements.define('rocket-content-area', await import('@rocket/components/content-area.js').then(m => m.RocketContentArea));
+        // prettier-ignore
+        customElements.define('rocket-header-scroll-menu', await import('@rocket/components/header-scroll-menu.js').then(m => m.RocketHeaderScrollMenu));
+        // prettier-ignore
+        customElements.define('rocket-card', await import('@rocket/components/card.js').then(m => m.RocketCard));
+        // prettier-ignore
+        customElements.define('rocket-columns', await import('@rocket/components/columns.js').then(m => m.RocketColumns));
+        
+      }
+
+      //registerCustomElements();
+      //import "./custom-social-link.js";
+
+    </script>
+  </body>
+</html>
+
+
+<!--
+ <custom-social-link
+  style="
+    --primary-text-color: white;
+    --primary-color: var(white);
+  "
+  name="Github"
+  url="https://github.com/darksoil-studio/holochain-playground"
+></custom-social-link>
+-->
